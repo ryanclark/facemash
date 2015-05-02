@@ -1,0 +1,68 @@
+[
+	{
+		"users": [
+			{
+				"firstName": "Laurie",
+				"lastName": "Hunt",
+				"picture": "https://randomuser.me/api/portraits/women/9.jpg",
+				"score": "1549",
+				"won": "100",
+				"lost": "1",
+				"userID": 1
+			},
+			{
+				"firstName": "Sonia",
+				"lastName": "Alvarez",
+				"picture": "https://randomuser.me/api/portraits/women/15.jpg",
+				"score": "1234",
+				"won": "45",
+				"lost": "10",
+				"userID": 2
+			}
+		]
+	},
+	{
+		"users": [
+			{
+				"firstName": "Candice",
+				"lastName": "Chapman",
+				"picture": "https://randomuser.me/api/portraits/women/32.jpg",
+				"score": "1325",
+				"won": "59",
+				"lost": "20",
+				"userID": 3
+			},
+			{
+				"firstName": "Deann",
+				"lastName": "Hart",
+				"picture": "https://randomuser.me/api/portraits/women/19.jpg",
+				"score": "1452",
+				"won": "90",
+				"lost": "6",
+				"userID": 4
+			}
+		]
+	},
+	{
+		"users": [
+			{
+				"firstName": "Arlene",
+				"lastName": "Graham",
+				"picture": "https://randomuser.me/api/portraits/women/50.jpg",
+				"score": "1621",
+				"won": "105",
+				"lost": "9",
+				"userID": 5
+			},
+			{
+				"firstName": "Kathryn",
+				"lastName": "Martinez",
+				"picture": "https://randomuser.me/api/portraits/women/41.jpg",
+				"score": "1234",
+				"won": "45",
+				"lost": "10",
+				"userID": 6
+			}
+		]
+	}
+]
