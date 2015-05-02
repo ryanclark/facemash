@@ -5,4 +5,4 @@
     headers:
       content-type: application/json
     file: mash.json
-    latency : 0
+    latency : 300
