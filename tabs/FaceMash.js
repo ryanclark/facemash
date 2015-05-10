@@ -67,10 +67,6 @@ var facemashTab = React.createClass({
     });
   },
   componentWillMount: function() {
-    StatusBarIOS.setStyle(1);
-
-    console.log('mounted');
-
     fetch('http://localhost:8882/rest/mash')
       .then(res => res.json())
       .then(res => this.setState({ list: res }))
