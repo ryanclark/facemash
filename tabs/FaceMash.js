@@ -7,7 +7,8 @@ var {
   View,
   Image,
   StatusBarIOS,
-  ActivityIndicatorIOS
+  ActivityIndicatorIOS,
+  TouchableHighlight
   } = React;
 
 var Person = React.createClass({
@@ -17,35 +18,37 @@ var Person = React.createClass({
     return (
       <View style={ styles.person }>
         <Image style={ styles.personImage } source={ { uri: person.picture } } />
-        <View style={ styles.personInfo }>
-          <Text style={ styles.personName }>
-            { person.firstName } { person.lastName }
-          </Text>
-          <View style={ styles.personScore }>
-            <Text style={ styles.personScoreHeader }>
-              WON
+        <TouchableHighlight onPress={ this.props.onPress }>
+          <View style={ styles.personInfo }>
+            <Text style={ styles.personName }>
+              { person.firstName } { person.lastName }
             </Text>
-            <Text style={ [styles.personScoreValue, styles.won] }>
-              { person.won }
-            </Text>
+            <View style={ styles.personScore }>
+              <Text style={ styles.personScoreHeader }>
+                WON
+              </Text>
+              <Text style={ [styles.personScoreValue, styles.won] }>
+                { person.won }
+              </Text>
+            </View>
+            <View style={ styles.personScore }>
+              <Text style={ styles.personScoreHeader }>
+                LOST
+              </Text>
+              <Text style={ [styles.personScoreValue, styles.lost] }>
+                { person.lost }
+              </Text>
+            </View>
+            <View style={ styles.personScore }>
+              <Text style={ styles.personScoreHeader }>
+                SCORE
+              </Text>
+              <Text style={ styles.personScoreValue }>
+                { person.score }
+              </Text>
+            </View>
           </View>
-          <View style={ styles.personScore }>
-            <Text style={ styles.personScoreHeader }>
-              LOST
-            </Text>
-            <Text style={ [styles.personScoreValue, styles.lost] }>
-              { person.lost }
-            </Text>
-          </View>
-          <View style={ styles.personScore }>
-            <Text style={ styles.personScoreHeader }>
-              SCORE
-            </Text>
-            <Text style={ styles.personScoreValue }>
-              { person.score }
-            </Text>
-          </View>
-        </View>
+        </TouchableHighlight>
       </View>
     )
   }
@@ -57,6 +60,11 @@ var facemashTab = React.createClass({
       list: [],
       currentIndex: 0
     };
+  },
+  onPersonPress: function() {
+    this.setState({
+      currentIndex: this.state.currentIndex + 1
+    });
   },
   componentWillMount: function() {
     StatusBarIOS.setStyle(1);
@@ -82,7 +90,7 @@ var facemashTab = React.createClass({
 
       var record = list[currentIndex];
 
-      var people = record.users.map(person => <Person person={ person } />);
+      var people = record.users.map(person => <Person person={ person } onPress={ this.onPersonPress } />);
 
       contents = (
         <View style={ styles.content }>
@@ -138,6 +146,7 @@ var styles = StyleSheet.create({
     overflow: 'hidden'
   },
   personInfo: {
+    backgroundColor: '#fff',
     borderLeftColor: 'rgba( 0, 0, 0, 0.1 )',
     borderLeftWidth: 1,
     borderRightColor: 'rgba( 0, 0, 0, 0.1 )',
