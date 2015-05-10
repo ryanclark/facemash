@@ -19,7 +19,6 @@ var facemash = React.createClass({
     }
   },
   changeTab(tabName) {
-    StatusBarIOS.setStyle(0);
     this.setState({
       selectedTab: tabName
     });
