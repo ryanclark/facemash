@@ -6,8 +6,11 @@ var {
   StyleSheet,
   Text,
   View,
-  TabBarIOS
+  TabBarIOS,
+  StatusBarIOS
 } = React;
+
+var FaceMashTab = require('./tabs/FaceMash');
 
 var facemash = React.createClass({
   getInitialState() {
@@ -16,6 +19,7 @@ var facemash = React.createClass({
     }
   },
   changeTab(tabName) {
+    StatusBarIOS.setStyle(0);
     this.setState({
       selectedTab: tabName
     });
@@ -28,9 +32,7 @@ var facemash = React.createClass({
           icon={ require('image!facemash') }
           onPress={ () => this.changeTab('faceMash') }
           selected={ this.state.selectedTab === 'faceMash' }>
-          <View style={ styles.pageView }>
-            <Text>Face Mash</Text>
-          </View>
+          <FaceMashTab />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="Messages"
