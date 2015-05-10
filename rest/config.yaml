@@ -6,3 +6,11 @@
       content-type: application/json
     file: mash.json
     latency : 300
+- request:
+    method: GET
+    url: ^/rest/messages?$
+  response:
+    headers:
+      content-type: application/json
+    file: messages.json
+    latency : 400

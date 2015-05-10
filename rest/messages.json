@@ -1,0 +1,26 @@
+[
+	{
+		"user": {
+			"firstName": "Laurie",
+			"lastName": "Hunt",
+			"picture": "https://randomuser.me/api/portraits/women/9.jpg",
+			"userID": 1
+		},
+		"lastMessage": {
+			"contents": "Hey there!",
+			"timestamp": 1431300318000
+		}
+	},
+	{
+		"user": {
+			"firstName": "Candice",
+			"lastName": "Chapman",
+			"picture": "https://randomuser.me/api/portraits/women/32.jpg",
+			"userID": 3
+		},
+		"lastMessage": {
+			"contents": "What's up?",
+			"timestamp": 1431300318000
+		}
+	}
+]
