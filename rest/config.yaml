@@ -1,0 +1,8 @@
+- request:
+    method: GET
+    url: ^/rest/mash?$
+  response:
+    headers:
+      content-type: application/json
+    file: mash.json
+    latency : 300
